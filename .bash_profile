@@ -36,14 +36,26 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias marc="ssh pmulholl@login.marconi.cineca.it"
+alias rcm="/Users/paulmulholland/Documents/fusion/phd/gene/GENE_Training/RCM/RCM ; exit;"
 alias anac="open /Users/paulmulholland/opt/anaconda3/Anaconda-Navigator.app"
 alias jcon="vi ~/.julia/config/startup.jl"
-alias nv='nvim'
-alias vrc='nvim ~/.vimrc'
-alias brc='nvim ~/.bash_profile'
-alias tmrc='nvim ~/.tmux.conf'
+alias vi='nvim'
+alias vrc='vi ~/.vimrc'
+alias bprc='vi ~/.bash_profile'
+alias tmrc='vi ~/.tmux.conf'
+alias zrc='vi ~/.zshrc'
+alias sozrc="source ~/.zshrc"
+alias sovrc="source ~/.vimrc"
+alias sobprc="source ~/.bash_profile"
+alias sotmrc="tmux source-file ~/.tmux.conf"
+alias ff="fzf --height 40%"
 
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+
