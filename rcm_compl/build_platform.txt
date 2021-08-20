@@ -1,2 +1,0 @@
-darwin_64bit_darwin
-v0.1.1-79-gd868ad9
