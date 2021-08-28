@@ -1,0 +1,8 @@
+#!/bin/bash
+ssh -t mulholland@sshvpn.cae.wisc.edu  \
+    -L   5901:localhost:5901  \
+    'ssh paulm@hsxy.ece.wisc.edu   \
+    -L   5901:localhost:5986 \
+    -F /dev/null -o UserKnownHostsFile=/dev/null \
+    -o StrictHostKeyChecking=no -o LogLevel=ERROR'
+
